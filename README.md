@@ -130,3 +130,76 @@ Check and confirm if the wazuh agent is deployed.
 
 ![Screenshot 2024-12-01 111728](https://github.com/user-attachments/assets/d00df239-87d5-4ffb-bf71-2796b80f82a9)
 
+
+## step - 6 - Orchestrating Security Response with Shuffle and The Hive
+
+6A. Log in to Shuffle and create a new workflow.
+
+![Screenshot 2024-12-01 112314](https://github.com/user-attachments/assets/f78ec082-ca8c-476d-a8c3-73fef977c33e)
+
+![Screenshot 2024-12-01 112509](https://github.com/user-attachments/assets/606490a7-925c-4a1c-b07e-4f51c8919f91)
+
+
+6B. Create a webHook to connect Shuffle and wazah manager.
+
+![Screenshot 2024-12-01 112806](https://github.com/user-attachments/assets/dc16cb66-3aeb-4b82-bae6-fcd8a40fb471)
+
+6C. Integrate the webHook into wazuh Osec.Conf file.
+
+![Screenshot 2024-12-01 112921](https://github.com/user-attachments/assets/6a3f6a0f-3bf5-4d9c-bb73-31a6cc5aa8db)
+
+6D. Test the workFlow of the webHook on Shuffle.
+
+![Screenshot 2024-12-01 120559](https://github.com/user-attachments/assets/d36214f0-68d9-40f4-b475-845ed39a78d8)
+
+6E. Excute the mimikatz file on the agent machine and check shuffle to check the events generated in the webhook through Wazuh agent.
+
+![Screenshot 2024-12-01 120810](https://github.com/user-attachments/assets/5ba33565-9987-4fc2-b55c-50b15ab6bcf3)
+
+
+## Step - 7 - Login to virusTotal to enrich the IOC's and integrate it to the shuffle workflow.
+
+![Screenshot 2024-12-01 121252](https://github.com/user-attachments/assets/43004567-87d2-4b59-b9ca-2b87668f8bbc)
+
+
+![Screenshot 2024-12-01 121652](https://github.com/user-attachments/assets/ad63da3d-026c-43b2-a25a-c25671b6b1ad)
+
+## Step - 8 - Integarate Hive into the Shuffle workflow.
+
+![Screenshot 2024-12-01 122113](https://github.com/user-attachments/assets/9590cc45-5e35-4f03-843e-a9ac01413053)
+
+![Screenshot 2024-12-01 122231](https://github.com/user-attachments/assets/0a829fae-f684-497d-baf9-8f4d1128e8af)
+
+
+
+## Step - 9 - Integrate Email into the Shuffle workflow to send alerts to the SOC analyst through Email.
+
+![Screenshot 2024-12-01 122507](https://github.com/user-attachments/assets/384dad08-ea0a-4c9b-aa49-23222e709b68)
+
+![Screenshot 2024-12-01 123131](https://github.com/user-attachments/assets/eca23dce-0788-4c33-8205-9582317721d4)
+
+
+9A. Login to SquareX to create a disposable email to send alerts.
+
+![Screenshot 2024-12-01 123326](https://github.com/user-attachments/assets/b80f29cb-3fcd-4667-9296-44e34881b6df)
+
+
+![Screenshot 2024-12-01 122937](https://github.com/user-attachments/assets/3267cd2a-9738-488a-bafd-f73439bf949f)
+
+
+
+## Step - 10 - Create workflow for the SOC analyst to respond to the alert.
+
+![Screenshot 2024-12-01 123837](https://github.com/user-attachments/assets/e4d6a0c8-c5e8-44ee-a7a8-1d5f0fc4a767)
+
+![Screenshot 2024-12-01 123934](https://github.com/user-attachments/assets/3b2f9c65-f903-4935-b3dc-260fb04fcc8e)
+
+10A. Check the alert on the disposable email and take action through given URL.
+
+![Screenshot 2024-12-01 124021](https://github.com/user-attachments/assets/bf52a965-91c8-4316-ae0d-032896c75c08)
+
+![Screenshot 2024-12-01 124136](https://github.com/user-attachments/assets/4f115228-3d03-4540-bcbb-0b52cff63e95)
+
+10B. Check if the response kicked in on your wazuh agent machine.
+
+![Screenshot 2024-12-01 124325](https://github.com/user-attachments/assets/72d8b4ba-bb33-4edf-8534-659eefbaa574)
